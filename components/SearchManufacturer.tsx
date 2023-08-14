@@ -48,37 +48,34 @@ const SearchManufacturer = ({ setManufacturer, manufacturer }: SearchManufacture
           >
             <Combobox.Options>
               {
-              filteredManufacturers.map(item=>(
-                <Combobox.Option
-                key={item}
-                className={({ active }) =>
-                  `relative search-manufacturer__option ${
-                    active ? "bg-primary-blue text-white" : "text-gray-900"
-                  }`
-                }
-                value={item}
-              >
-                  {({selected,active})=>(
-                    <>
-                      <span
-                          className={`block truncate ${
-                            selected ? 'font-medium' : 'font-normal'
-                          }`}
+                filteredManufacturers.map(item => (
+                  <Combobox.Option
+                    key={item}
+                    className={({ active }) =>
+                      `relative search-manufacturer__option ${active ? "bg-primary-blue text-white" : "text-gray-900"
+                      }`
+                    }
+                    value={item}
+                  >
+                    {({ selected, active }) => (
+                      <>
+                        <span
+                          className={`block truncate ${selected ? 'font-medium' : 'font-normal'
+                            }`}
                         >
                           {item}
                         </span>
                         {selected ? (
                           <span
-                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active ? 'text-white' : 'text-teal-600'
-                            }`}
+                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-teal-600'
+                              }`}
                           >
                           </span>
                         ) : null}
-                    </>
-                  )}
-              </Combobox.Option>)
-              )
+                      </>
+                    )}
+                  </Combobox.Option>)
+                )
 
               }
             </Combobox.Options>
