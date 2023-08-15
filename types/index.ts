@@ -16,7 +16,6 @@ export interface SearchManufacturerProps {
 
 export interface CarProps {
   city_mpg: number;
-
   combination_mpg: number;
   cylinders: number;
   displacement: number;
