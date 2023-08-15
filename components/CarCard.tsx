@@ -64,7 +64,7 @@ function CarCard({ car }: CarCardProps) {
             </p>
           </div>
           {/* thierd */}
-          <div className='flex flex-col justify-center items-center gap-2'>
+          <div className='flex flex-col justify-center items-center gap-2 '>
             <Image
               src="/GAS.svg"
               width={20}
